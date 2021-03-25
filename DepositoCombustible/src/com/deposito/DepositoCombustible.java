@@ -1,3 +1,6 @@
+package com.deposito;
+
+
 /**
  * DepositoCombustible es una clase que representa el depósito de gasolina de un coche
  * Un objeto DepositoCombustible agrupa la información necesaria para describir el estado del depósito:
@@ -82,10 +85,11 @@ public class DepositoCombustible {
 	* <hr>
 	* 
 	* @param amount 	Cantidad de combustible que añade
+ * @return 
 	* 
 	*/
-    public void fill(double amount){
-       depNivel = depNivel + amount;
+    public double fill(double amount){
+       return depNivel = depNivel + amount;
     }
 
    /**
@@ -94,7 +98,7 @@ public class DepositoCombustible {
     * @param amount cantidad de fuel consumida
     * 
     */
-	public void consumir(double amount){
-       depNivel = depNivel - amount;
+	public double consumir(double amount){
+       return depNivel = depNivel - amount;
     }
 }

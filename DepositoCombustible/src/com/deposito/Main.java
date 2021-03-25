@@ -1,3 +1,6 @@
+package com.deposito;
+
+
 /**
  * Main class of the Java program. 
  * 
