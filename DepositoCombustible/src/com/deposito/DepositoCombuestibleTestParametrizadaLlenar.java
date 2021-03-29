@@ -15,25 +15,28 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class DepositoCombuestibleTestParametrizadaLlenar {
 	
-	public double num;
+	public double num1;
+	public double num2;
 	public double res;
 	
-	public void DepositoCombuestibleParametrizada(double num, double res) {
-		this.num = num;
+	public DepositoCombuestibleTestParametrizadaLlenar(double num1, double num2, double res) {
+		this.num1 = num1;
+		this.num2 = num2;
 		this.res = res;
 	}
 	
+	@Parameters
 	public static Collection<Object[]> numeros(){
 		return Arrays.asList(new Object[][] {
-			{20,50},{5,35},{-5,25}
+			{30.0, 20.0,50.0},{30.0,5.0,35.0},{30.0,-5.0,25.0}
 		});
 	}
 	
 	@Test
 	public void testFill() {
-		DepositoCombustible dc = new DepositoCombustible(50,30);
-		double resultado = dc.fill(num);
-		assertEquals(res, resultado);
+		DepositoCombustible dc = new DepositoCombustible(50,num1);
+		dc.fill(num2);
+		assertEquals(res, dc.getDepositoNivel(),0);
 	}
 
 }

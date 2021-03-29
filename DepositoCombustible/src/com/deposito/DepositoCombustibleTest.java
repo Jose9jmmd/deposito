@@ -10,14 +10,14 @@ public class DepositoCombustibleTest {
 	public void testGetDepositoNivel() {
 		DepositoCombustible dc = new DepositoCombustible(50,30);
 		double res = dc.getDepositoNivel();
-		assertEquals(30,res);
+		assertEquals(30,res,0);
 	}
 
 	@Test
 	public void testGetDepositoMax() {
 		DepositoCombustible dc = new DepositoCombustible(50,30);
 		double res = dc.getDepositoMax();
-		assertEquals(50,res);
+		assertEquals(50,res,0);
 	}
 
 	@Test

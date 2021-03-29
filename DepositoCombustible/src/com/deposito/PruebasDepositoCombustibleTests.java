@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ DepositoCombuestibleTestParametrizadaConsumir.class, DepositoCombuestibleTestParametrizadaLlenar.class,
+@SuiteClasses({ DepositoCombustibleTestParametrizadaConsumir.class, DepositoCombuestibleTestParametrizadaLlenar.class,
 		DepositoCombustibleTest.class })
 public class PruebasDepositoCombustibleTests {
 
